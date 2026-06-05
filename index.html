@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega pro</title>
+    <style>
+        /* Global Settings */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eaeded;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #131921; /* Amazon dark blue/black */
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #ffffff;
+        }
+        .nav-logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        /* تصميم اللوجو الذهبي الخاص بك */
+        .company-logo {
+            height: 45px; /* تم زيادة الارتفاع قليلاً ليناسب الشعارات المميزة */
+            width: auto;  /* الحفاظ على أبعاد الصورة بدون تمطيط */
+            object-fit: contain;
+            cursor: pointer;
+        }
+        .company-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+        .nav-links a:hover {
+            color: #febd69;
+        }
+
+        /* Main Grid Container */
+        .main-content {
+            flex: 1;
+            max-width: 1280px;
+            width: 100%;
+            margin: 40px auto;
+            padding: 0 24px;
+        }
+        .amazon-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        /* Product Card Styling */
+        .card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 0px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: box-shadow 0.2s ease;
+        }
+        .card:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .card-title {
+            font-size: 21px;
+            font-weight: 700;
+            color: #0f1111;
+            margin-bottom: 12px;
+        }
+        
+        /* Image Container & Responsive Images */
+        .image-container {
+            width: 100%;
+            height: 260px;
+            background-color: #f7f7f7;
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .card:hover .product-image {
+            transform: scale(1.03);
+        }
+
+        .card-link {
+            font-size: 13px;
+            color: #007185;
+            text-decoration: none;
+            align-self: flex-start;
+            margin-top: 8px;
+        }
+        .card-link:hover {
+            color: #c45500;
+            text-decoration: underline;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #232f3e;
+            color: #eaeded;
+            padding: 30px 24px;
+            text-align: center;
+            margin-top: auto;
+        }
+        .footer-emails {
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: #dddddd;
+        }
+        .footer-emails a {
+            color: #febd69;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-emails a:hover {
+            text-decoration: underline;
+        }
+        .footer-copyright {
+            font-size: 13px;
+            color: #b6b6b6;
+            border-top: 1px solid #3a4553;
+            padding-top: 15px;
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 1024px) {
+            .amazon-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        @media (max-width: 640px) {
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            .nav-links a {
+                margin: 0 10px;
+            }
+            .amazon-grid {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+            .main-content {
+                margin: 20px auto;
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo-section">
+            <!-- تم إضافة مسار صورتك المحلية هنا بنجاح -->
+            <img class="company-logo" src="C:\Users\elwady\Desktop\online shopping\شعار مميز بلون الذهب.png" alt="Gold Logo">
+            <span class="company-name">Mega pro</span>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Orders</a>
+            <a href="#">Cart</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="amazon-grid">
+            
+            <!-- Card 1 -->
+            <div class="card">
+                <div>
+                    <h2 class="card-title">Smart Home Devices</h2>
+                    <div class="image-container">
+                        <img class="product-image" src="C:\Users\elwady\Desktop\online shopping\boody1.webp" alt="Smart Home">
+                    </div>
+                </div>
+                <a href="#" class="card-link">Shop now</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div>
+                    <h2 class="card-title">ui\ux development</h2>
+                    <div class="image-container">
+                        <img class="product-image" src="C:\Users\elwady\Desktop\online shopping\boody2.png" alt="ui\ux development">
+                    </div>
+                </div>
+                <a href="#" class="card-link">Explore more</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div>
+                    <h2 class="card-title">Game development</h2>
+                    <div class="image-container">
+                        <img class="product-image" src="C:\Users\elwady\Desktop\online shopping\boody3.webp" alt="Game development">
+                    </div>
+                </div>
+                <a href="#" class="card-link">See all deals</a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <div>
+                    <h2 class="card-title">Electronics Deals</h2>
+                    <div class="image-container">
+                        <img class="product-image" src="C:\Users\elwady\Desktop\online shopping\boody4.png" alt="Electronics">
+                    </div>
+                </div>
+                <a href="#" class="card-link">Browse items</a>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <div>
+                    <h2 class="card-title">Web design</h2>
+                    <div class="image-container">
+                        <img class="product-image" src="C:\Users\elwady\Desktop\online shopping\boody5.png" alt="Web design">
+                    </div>
+                </div>
+                <a href="#" class="card-link">Shop now</a>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+                <div>
+                    <h2 class="card-title">Mobil application</h2>
+                    <div class="image-container">
+                        <img class="product-image" src="C:\Users\elwady\Desktop\online shopping\aboody6.jpg" alt="Mobil application">
+                    </div>
+                </div>
+                <a href="#" class="card-link">See more</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-emails">
+            Contact us: 
+            <a href="mailto:support@amazon.com">support@ Mega pro.com</a> | 
+            <a href="mailto:sales@amazon.com">sales@Mega pro.com</a>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2026 Mega pro. All rights reserved to Mega pro.
+        </div>
+    </footer>
+
+</body>
+</html>
